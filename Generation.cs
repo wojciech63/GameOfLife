@@ -46,6 +46,10 @@ namespace GameOfLife
         {
             Generation next = new Generation(Rows, Cols);
 
+            // Cell stays alive if they have 2 or 3 live neighbors
+            // Dead cell becomes alive if they have 3 live neighbors
+            // Otherwise death
+
             for (int r = 0; r < Rows; r++)
             {
                 for (int c = 0; c < Cols; c++)
